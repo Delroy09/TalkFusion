@@ -1,0 +1,96 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 265 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 265 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 265 10% 10%;
+
+    --primary: 265 100% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 175 98% 43%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 265 10% 96%;
+    --muted-foreground: 265 10% 45%;
+
+    --accent: 165 90% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 350 89% 38%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 265 10% 86%;
+    --input: 265 10% 86%;
+    --ring: 265 100% 47%;
+
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 265 10% 10%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 265 10% 13%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 265 10% 13%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 265 100% 60%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 175 98% 43%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 265 10% 20%;
+    --muted-foreground: 265 10% 70%;
+ 
+    --accent: 165 90% 43%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 350 89% 60%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 265 10% 25%;
+    --input: 265 10% 25%;
+    --ring: 265 100% 60%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+  
+  .dark .glass-morphism {
+    @apply bg-card/70 backdrop-blur-lg border border-white/10 shadow-lg;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
